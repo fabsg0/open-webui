@@ -337,7 +337,7 @@ export const chatCompletion = async (
 	const controller = new AbortController();
 	let error = null;
 
-	const res = await fetch(`${url}/chat/completions`, {
+	const res = await fetch(`${url}`, {
 		signal: controller.signal,
 		method: 'POST',
 		headers: {
@@ -365,7 +365,7 @@ export const generateOpenAIChatCompletion = async (
 ) => {
 	let error = null;
 
-	const res = await fetch(`${url}/chat/completions`, {
+	const res = await fetch(`${url}`, {
 		method: 'POST',
 		headers: {
 			Authorization: `Bearer ${token}`,
